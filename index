@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> <!-- 文字コードをUTF-8に指定 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ビューポートの設定 -->
+        <title>Promotion Video</title> <!-- タイトルの設定 -->    
+    </head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> <!-- A-Frameのライブラリを読み込み -->
+    <!-- NFTではなくマーカー+位置ベースのサポートが含まれたarjsのバージョンをインポート -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <body style="margin : 0px; overflow: hidden;"> <!-- ボディのスタイルを設定 -->
+        <a-scene embedded arjs> <!-- A-Frameのシーンを定義し、AR.jsを有効にする -->
+            <a-marker preset="hiro"> <!-- マーカーを定義し、presetをhiroに指定 -->
+                <a-entity
+                    position="0 0 0" <!-- エンティティの位置を指定 -->
+                    scale="0.05 0.05 0.05" <!-- エンティティのスケールを指定 -->
+                    gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf" <!-- glTFモデルのURLを指定 -->
+                ></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity> <!-- カメラを定義 -->
+        </a-scene>
+    </body>
+</html>
+
+
